@@ -86,9 +86,9 @@ export const updateUser = (user: User): Response<UpdateUserResponse> => {
   });
 
   check(res, {
-    "Update User By Id: is 200": (r) => r.status === 200,
-    "Update User By Id: has correct updatedAt": (_) => jsonRes.updatedAt !== "",
-    "Update User By Id: has correct job title": (_) => jsonRes.job === jobTitle,
+    "Update User By Id: is 200" : (r) => r.status === 200,
+    "Update User By Id: has correct updatedAt" : (_) => jsonRes.updatedAt !== "",
+    "Update User By Id: has correct job title" : (_) => jsonRes.job === jobTitle,
   });
 
   return {    
